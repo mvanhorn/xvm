@@ -26,8 +26,7 @@ import static java.lang.constant.ConstantDescs.CD_void;
 
 /**
  * The builder for Enumeration types.
- * <p>
- * It overrides the CommonBuilder to do the following:
+ * <p>It overrides the CommonBuilder to do the following:
  *   - augment the Java constructor
  *   - add synthetic "$names" and "$values" properties
  *   - implement "count", "names" and "values" properties
