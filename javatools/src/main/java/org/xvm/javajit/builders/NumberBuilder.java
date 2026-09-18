@@ -468,7 +468,7 @@ public class NumberBuilder extends AugmentingBuilder {
 
     /**
      * Assemble an optimized static implementation of "bits$get$p()".
-     *
+     * <p>
      * {@code return ArrayBit.fromLongs(bitLength, rawBits);}
      */
     protected void generateBitsGet(CodeBuilder code, JitMethodDesc jmd) {
@@ -587,7 +587,7 @@ public class NumberBuilder extends AugmentingBuilder {
 
     /**
      * Assemble an optimized static implementation of "sign$get$p()".
-     *
+     * <p>
      * {@code return value == 0 ? Zero : value < 0 ? Negative : Positive;}
      */
     protected void generateSignGet(CodeBuilder code, JitMethodDesc jmd) {
@@ -633,7 +633,7 @@ public class NumberBuilder extends AugmentingBuilder {
 
     /**
      * Assemble an optimized static implementation of "negative$get$p()".
-     *
+     * <p>
      * {@code return value < 0;}
      */
     protected void generateNegativeGet(CodeBuilder code, JitMethodDesc jmd) {
@@ -660,7 +660,7 @@ public class NumberBuilder extends AugmentingBuilder {
 
     /**
      * Assemble an optimized static implementation of "finite$get$p()".
-     *
+     * <p>
      * {@code return !isBinaryFP || Float.isFinite(value);}
      */
     protected void generateFiniteGet(CodeBuilder code, JitMethodDesc jmd) {
@@ -693,7 +693,7 @@ public class NumberBuilder extends AugmentingBuilder {
 
     /**
      * Assemble an optimized static implementation of "infinity$get$p()".
-     *
+     * <p>
      * {@code return isBinaryFP && Float.isInfinite(value);}
      */
     protected void generateInfinityGet(CodeBuilder code, JitMethodDesc jmd) {
@@ -726,7 +726,7 @@ public class NumberBuilder extends AugmentingBuilder {
 
     /**
      * Assemble an optimized static implementation of "NaN$get$p()".
-     *
+     * <p>
      * {@code return isBinaryFP && Float.isNaN(value);}
      */
     protected void generateNaNGet(CodeBuilder code, JitMethodDesc jmd) {
@@ -818,7 +818,7 @@ public class NumberBuilder extends AugmentingBuilder {
 
     /**
      * Assemble an optimized static implementation of "magnitude$get$p()".
-     *
+     * <p>
      * {@code return isUnsigned ? value : Math.abs(value);}
      */
     protected void generateMagnitudeGet(CodeBuilder code, JitMethodDesc jmd) {
@@ -1059,7 +1059,7 @@ public class NumberBuilder extends AugmentingBuilder {
     /**
      * Assemble optimized static implementations of "toBitArray$p()", "toNibbleArray$p()", and
      * "toByteArray$p()".
-     *
+     * <p>
      * {@code return Array.fromLongs(mutability, bitLength, rawBits);}
      */
     protected void generateToArray(CodeBuilder code, JitMethodDesc jmd, String jitName) {
