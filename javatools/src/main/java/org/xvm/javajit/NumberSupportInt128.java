@@ -59,7 +59,9 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will add two XVM primitive types that are each
      * represented by two Java long primitive values.
      * (T + T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value and below that will be the low long value.
      *
@@ -79,7 +81,9 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will add two XVM primitive types that are each
      * represented by two Java long primitive values.
      * (T + T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value and below that will be the low long value.
      *
@@ -103,9 +107,12 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will add two XVM primitive types that are each
      * represented by two Java long primitive values.
      * (T + T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The first XVM primitive is stored in slots, the XVM primitive to add is represented by the
      * two long parameters.
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value, and below that will be the low long value.
      *
@@ -125,7 +132,9 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will add two XVM primitive types that are each
      * represented by two Java long primitive values.
      * (T + T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value and below that will be the low long value.
      *
@@ -191,6 +200,7 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will logically AND two XVM primitives that are
      * each represented by two long Java primitive values.
      * (T & T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
      *
      * @param bctx       the current build context
@@ -220,6 +230,7 @@ public interface NumberSupportInt128 {
     /**
      * Build the optimized binary operation that will produce the complement of a XVM primitive
      * that is represented by two long Java primitive values (~T -> T).
+     *
      * <p>The target register should not have been loaded to the stack.
      *
      * @param code       the code builder to add the op codes to
@@ -238,6 +249,7 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will divide two XVM primitive types each
      * represented by two Java long primitives
      * (T / T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
      *
      * @param bctx       the current build context
@@ -270,6 +282,7 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will produce the modulo of two XVM primitive types
      * each represented by two Java long primitives
      * (T % T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
      *
      * @param bctx       the current build context
@@ -302,6 +315,7 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will multiply two XVM 128 bit integer primitives
      * that are each represented by two long Java primitive values.
      * (T * T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
      *
      * @param bctx       the current build context
@@ -341,6 +355,7 @@ public interface NumberSupportInt128 {
      * Build the optimized unary operation that will produce negative of a XVM primitive type
      * that is stored as two Java long values
      * (-T -> T).
+     *
      * <p>The target should not have been loaded to the stack.
      *
      * @param code       the code builder to add the op codes to
@@ -381,6 +396,7 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will logically OR two XVM primitives that are
      * each represented by two long Java primitive values.
      * (T | T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
      *
      * @param bctx       the current build context
@@ -411,8 +427,11 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will logically shift left a XVM primitive that
      * is represented by two long Java primitive values.
      * (T << T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The argument register should be a Java {@code int} primitive value
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value, and below that will be the low long value.
      *
@@ -482,8 +501,11 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will logically shift right a XVM primitive that
      * is represented by two long Java primitive values.
      * (T >> T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The argument register should be a Java {@code int} primitive value
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value, and below that will be the low long value.
      *
@@ -570,6 +592,7 @@ public interface NumberSupportInt128 {
 
     /**
      * Load the shift argument for an Int128 or UInt128 shift left operation.
+     *
      * <p>To remain consistent with other Java shift operations, the shift argument is masked with the
      * maximum number of bits that can be shifted (in this case seven bits, 0x7F).
      *
@@ -591,7 +614,9 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will subtract one XVM primitive type from another
      * where each is represented by two Java long primitive values.
      * (T - T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value and below that will be the low long value.
      *
@@ -615,7 +640,9 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will subtract one XVM primitive type from another
      * where each is represented by two Java long primitive values.
      * (T - T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value and below that will be the low long value.
      *
@@ -635,9 +662,12 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will subtract one XVM primitive type from another
      * where each is represented by two Java long primitive values.
      * (T - T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The first XVM primitive is stored in slots, the XVM primitive to subtract is represented by
      * the two long parameters.
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value and below that will be the low long value.
      *
@@ -657,7 +687,9 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will subtract one XVM primitive type from another
      * where each is represented by two Java long primitive values.
      * (T - T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
+     *
      * <p>The result will be represented by two Java long primitive values on the stack. The top of
      * the stack will be the high long value and below that will be the low long value.
      *
@@ -712,6 +744,7 @@ public interface NumberSupportInt128 {
      * Build the optimized binary operation that will logically XOR two XVM primitives that are
      * each represented by two long Java primitive values.
      * (T ^ T -> T).
+     *
      * <p>Neither the target nor argument should have been loaded to the stack.
      *
      * @param bctx       the current build context
